@@ -1,6 +1,6 @@
 {
-  "name": "kwikly-widget-react-native",
-  "version": "0.1.0",
+  "name": "@kweekatel/kwikly-widget-react-native",
+  "version": "0.3.3",
   "description": "React native wrapper for live chat widget for Kwikly by Kweekatel",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -20,17 +20,16 @@
   "files": [
     "src",
     "lib",
-    "android",
-    "ios",
-    "cpp",
     "*.podspec",
     "react-native.config.js",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
+    "!ios",
+    "!android",
+    "!cpp",
+    "!**/build",
+    "!**/gradle",
+    "!**/gradlew",
+    "!**/gradlew.bat",
+    "!**/local.properties",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
@@ -61,7 +60,8 @@
   },
   "homepage": "https://github.com/Kweekatel/kwikly-widget-react-native#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
@@ -77,8 +77,8 @@
     "eslint-plugin-prettier": "^5.0.1",
     "jest": "^29.7.0",
     "prettier": "^3.0.3",
-    "react": "18.3.1",
-    "react-native": "0.76.3",
+    "react": "^18.3.1",
+    "react-native": "^0.76.3",
     "react-native-builder-bob": "^0.33.3",
     "release-it": "^17.10.0",
     "typescript": "^5.2.2"
@@ -130,7 +130,10 @@
       "prettier"
     ],
     "rules": {
+      "react-hooks/exhaustive-deps": "off",
       "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
       "prettier/prettier": [
         "error",
         {
@@ -183,5 +186,17 @@
     "languages": "js",
     "type": "library",
     "version": "0.44.3"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.1.0",
+    "moment-timezone": "^0.5.46",
+    "react": "*",
+    "react-native": "*",
+    "react-native-safe-area-context": "^4.14.0",
+    "react-native-webview": "^13.12.4"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }

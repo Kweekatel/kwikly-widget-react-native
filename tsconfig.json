@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
+    "allowJs": true,
     "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -25,5 +26,6 @@
     "strict": true,
     "target": "ESNext",
     "verbatimModuleSyntax": true
-  }
+  },
+  "extends": "expo/tsconfig.base"
 }

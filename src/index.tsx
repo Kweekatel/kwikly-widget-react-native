@@ -1,3 +1,13 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import KwiklyWidgetButton from './components/KwiklyWidgetButton';
+import KwiklyLiveChatWidget from './components/KwiklyLiveChatWidget';
+import {
+  KwiklyChatProvider,
+  useKwiklyChat,
+} from './components/KwiklyChatProvider';
+
+export {
+  KwiklyWidgetButton,
+  KwiklyLiveChatWidget,
+  KwiklyChatProvider,
+  useKwiklyChat,
+};
